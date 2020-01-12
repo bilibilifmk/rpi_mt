@@ -1,0 +1,3 @@
+/home/pi/fbcp-ili9341/build/CMakeFiles/rebuild_cache.dir
+/home/pi/fbcp-ili9341/build/CMakeFiles/fbcp-ili9341.dir
+/home/pi/fbcp-ili9341/build/CMakeFiles/edit_cache.dir

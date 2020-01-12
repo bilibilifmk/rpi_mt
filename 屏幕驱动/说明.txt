@@ -1,0 +1,23 @@
+屏幕驱动项目地址 ：https://github.com/juj/fbcp-ili9341
+make参数
+cmake -DARMV8A=ON -DDISPLAY_ROTATE_180_DEGREES=ON -DILI9341=ON -DGPIO_TFT_DATA_CONTROL=24 -DGPIO_TFT_RESET_PIN=25 -DSPI_BUS_CLOCK_DIVISOR=10 -DADAFRUIT_ILI9341_PITFT=ON -DDISPLAY_BREAK_ASPECT_RATIO_WHEN_SCALING=ON -DSTATISTICS=0 -DUSE_DMA_TRANSFERS=OFF ..
+
+
+
+使用我编译的驱动方法：
+1.吧build放在用户目录下（/home/pi/）
+2.执行cd /home/pi/build/
+2.添加启动权限： chomd +x fbcp-ili9341
+3.测试（执行成功应该会黑屏）：sudo ./fbcp-ili9341
+4.写入启动项（请先安装vim插件）
+执行  sudo vi /etc/rc.local
+在exit0前添加 sudo /home/pi/build/fbcp-ili9341 &
+5.设置在没有HDMI情况下依然输出
+执行 sudo vi /boot/config.txt
+
+在任意位置添加以下参数
+
+hdmi_group=2
+hdmi_mode=87
+hdmi_cvt=320 240 60 1 0 0 0
+hdmi_force_hotplug=1
