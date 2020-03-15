@@ -1,0 +1,22 @@
+键盘驱动使用说明 
+
+ 首先安装i2c相关工具
+sudo apt update
+sudo apt upgrade
+sudo apt install i2c-tools
+i2c-detect -y 1
+
+ 一 替换内核 两种方法
+1.使用我编译好的内核 boot 压缩文件替换 原本boot分区 （linux或win下操作）
+2.自行编译内核 在配置内核时勾选tca8418
+
+二 替换内核设备树
+ *使用我提供的内核可以跳过这部
+rca8418内提供键盘key值 
+编译指令 sudo dtc -@ -I dts -O dtb -o tca8418.dtbo tca8418.dts
+得到tca8418.dtb  执行树替换 sudo cp tca8418.dtbo /boot/overlays/
+重启后 执行dmesg | grep i2c 
+输出 
+i2c /dev entries driver
+input: tca8418 as /devices/platform/soc/20804000.i2c/i2c-1/1-0034/input/input0
+即代表成功
