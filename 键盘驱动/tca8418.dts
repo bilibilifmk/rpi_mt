@@ -14,65 +14,57 @@ fragment@0 {
 			
 	        reg = <0x34>;
  
-		/* the interrupt is specified as:
-		 * The first cell is the GPIO number.
-		 * The second cell is used to specify flags:
-		 * bits[3:0] trigger type and level flags:
-		 * 1 = low-to-high edge triggered.
-		 * 2 = high-to-low edge triggered.
-		 * 4 = active high level-sensitive.
-		 * 8 = active low level-sensitive.
-		*/
+	
  
-		irq-gpio = <&gpio 16 0x2>; /* IRQF_TRIGGER_FALLING */
-		interrupts = <16 2>; /* high-to-low edge triggered */
+		irq-gpio = <&gpio 16 0x2>; /* 中断io 下沿触发 */
+		interrupts = <16 2>; /* 中断io 下沿触发  */
 		interrupt-parent = <&gpio>;
 		interrupt-controller;
 	        
 		keypad,num-rows = <8>;
 	        keypad,num-columns = <10>;
  
-		/* row | column | key-code  ex: 04,08,0010 q key */
+		/* row | column | key-code  例如: 04,08,0010 q 键 */
 	        linux,keymap = <
 				0X0000001E
-0X0001002C
-0X00020012
-0X00030013
-0X00040014
-0X00050015
-0X00060016
-0X00070017
-0X00080018
-0X00090019
-0X01000010
-0X0101001F
-0X01020020
-0X01030021
-0X01040022
-0X01050023
-0X01060024
-0X01070025
-0X01080026
-0X0109000E
-0X02000038
-0X02010011
-0X0202002D
-0X0203002E
-0X0204002F
-0X02050030
-0X02060031
-0X02070032
-0X0208000F
-0X0209001C
-0X0300002A
-0X03010035
-0X03020039
-0X03040069
-0X0305006A
-0X03060067
-0X0307006C
-0X0308001D
-0X0309002a
+				0X0001002C
+				0X00020012
+				0X00030013
+				0X00040014
+				0X00050015
+				0X00060016
+				0X00070017
+				0X00080018
+				0X00090019
+				0X01000010
+				0X0101001F
+				0X01020020
+				0X01030021
+				0X01040022
+				0X01050023
+				0X01060024
+				0X01070025
+				0X01080026
+				0X0109000E
+				0X02000038
+				0X02010011
+				0X0202002D
+				0X0203002E
+				0X0204002F
+				0X02050030
+				0X02060031
+				0X02070032
+				0X0208000F
+				0X0209001C
+				0X0300002A
+				0X03010035
+				0X03020039
+				0X03040069
+				0X0305006A
+				0X03060067
+				0X0307006C
+				0X0308001D
+				0X0309002a
  
 				>;
 			};
