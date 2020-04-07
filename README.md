@@ -1,7 +1,17 @@
 # rpi_mt
 ## 树莓派移动终端 全键盘及2.4寸tft材质屏幕
 
-# 这是一个还在开发中的项目 开发完成后会提供系统整合镜像
+# 这是一个还在开发中的项目 
+
+## 我自己打包的系统镜像 
+https://pan.baidu.com/s/1et3HwhCRhgPBmtK6T9dM4g  提取码：k1xn   
+该镜像为dd命令备份出来的，镜像包含opencv python3可以直接用python来代替 源以替换国内源，所有软件包均为最新 （2020.4.7）已经打开ssh   
+用户名pi 密码 1  root用户密码 a
+
+
+
+
+
 
 ## α版本展示：https://www.bilibili.com/video/av96884398/
 
