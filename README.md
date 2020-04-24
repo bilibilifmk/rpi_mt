@@ -94,7 +94,7 @@ cmake -DARMV8A=ON -DDISPLAY_ROTATE_180_DEGREES=ON -DILI9341=ON -DGPIO_TFT_DATA_C
 
 2.执行cd /home/pi/build/
 
-2.添加启动权限： chomd +x fbcp-ili9341
+2.添加启动权限： chmod +x fbcp-ili9341
 
 3.测试（执行成功应该会黑屏）：sudo ./fbcp-ili9341
 
