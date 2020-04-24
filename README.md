@@ -73,6 +73,9 @@ input: tca8418 as /devices/platform/soc/20804000.i2c/i2c-1/1-0034/input/input0
 
 即代表成功
 
+修改启动配置    vi /boot/config.txt  
+在最后一行添加  dtoverlay=tca8418 
+保存后重启 即可应用键盘驱动树
 
 # 屏幕驱动说明
 
