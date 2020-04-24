@@ -51,7 +51,7 @@ i2c-detect -y 1
  
 1.使用我编译好的内核 boot 压缩文件替换 原本boot分区 （linux或win下操作）
 
-2.自行编译内核 在配置内核时勾选tca8418
+2.自行编译内核 在配置内核时勾选tca8418（参考 https://5volt-junkie.net/i2c-keypad/）
 
 
 二 替换内核设备树
